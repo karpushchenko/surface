@@ -107,6 +107,8 @@ button {
     background-color: #5d40ad;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow:  hoff voff blur #0a0e34;
+    box-shadow: 0 10px 10px #0a0e34;
 }
 
 button span span {
@@ -137,12 +139,21 @@ h2 {
     text-transform: uppercase;
     color: #e7e7e7;
 }
-
+.noslider-box{
+    position: relative;
+}
 .slider-photo {
     position: relative;
     min-height: 200px;
     margin-bottom: 8%;
     display: none;
+}
+.slider-photo-full-athlete{
+  position: absolute;
+    right:50%;
+    top:20%;
+  z-index: 5;
+    
 }
 
 .ath-cross-1 {
@@ -168,27 +179,124 @@ h2 {
     left: 20%;
     z-index: 100;
 }
-
+.slider-photo-full-player{
+  position: absolute;
+    left:50%;
+    top:20%;
+  z-index: 5;
+    
+    
+}
 .footballer-full{
-    width:20%;
-   
+    position: relative;
+    bottom:250px;
+    left:15%;
+    width:auto;
+    z-index: 1;
+    transform: scale(0.7)
+   }
+.cross-full-1 {
+  position: absolute;
+    left:230px;
+    top:-30px;
+    transform:scale(0.6);
+}
+
+.cross-full-2 {
+  position: absolute;
+    left:245px;
+    top:-20px;
+    transform:scale(0.6);
+}
+
+.line-full-1 {
+    width:30%;
+    position: absolute;
+    left: 290px;
+    top:40px;
+    z-index: 0;
+    transform: scale(2)
+
     
+}
+.noslider-text {
+    width: 100%;
     
+}
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.noslider-heading {
+    text-align: left;
+    width: 50%;
+    margin-left: 50%;
+}
+.noslider-heading h2, .noslider-heading-left h2{
+    margin: 0;
+}
+.noslider-heading {
+    text-align: left;
+    width: 50%;
+    margin-left: 50%;
+}
+.noslider-heading-left{
+    text-align: left;
+    width: 40%;
+    margin-right: 50%;  
+    margin-left: 10%;
+}
+
+
+.text-collaboration {
+    background-color: rgba(94, 66, 176, 0.06);
+}
+
+.text-growth {
+    background-color: #5e42b0;
+    color: white;
+}
+.text-growth-players {
+    background-color:#0a0e34;
+    color: white;
+}
+
+.noslider-text-content {
+    width:40%;
+    float:right;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+.left{
+    float:left;
+    margin-left: 10%;
+    margin-right: 0;
+}
+
+.slider-box{
+    display: none;
 }
 .slider-text {
     margin-top: -5%;
     padding-top: 10%;
     height: 185px;
     background-color: #f5f4f9;
-}
+    }
 
 h3 {
     font: 700 28px / 34.489px "Montserrat";
     text-transform: uppercase;
     color: #c1c1c1;
 }
+.noslider-box h2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
 
-.slider h3:before {
+.slider-box h3:before, .noslider-box h3:before {
     font-size: .6em;
     position: relative;
     top: -5px;
@@ -230,6 +338,50 @@ h3 {
     left: 0;
     z-index: 100;
 }
+.bplayer-full {
+    position: relative;
+    bottom:270px;
+    right:30%;
+    width:auto;
+    z-index: 1;
+    transform: scale(0.7)
+}
+
+.line-full-2 {
+    position: absolute;
+    left: -30px;
+    top:80px;
+    transform: scale(0.7);
+    z-index: 0;
+}
+
+.line-full-3 {
+    position: absolute;
+    left:250px;
+    top:-150px;
+    transform: scale(0.7)
+}
+
+.cross-full-5 {
+    position: absolute;
+    left:380px;
+    top:120px;
+    transform:scale(0.6);
+}
+
+.cross-full-3 {
+    position: absolute;
+    left:85px;
+    top:-60px;
+    transform:scale(0.6);
+}
+
+.cross-full-4 {
+    position: absolute;
+    left:70px;
+    top:-70px;
+    transform:scale(0.6);
+}
 
 h3.connection:before {
     content: "01"
@@ -238,9 +390,47 @@ h3.connection:before {
 h3.growth:before {
     content: '03';
 }
-
-.points.active .photo-container {
+.photo-container{
+    display: none;
+    position: relative;    
+}
+.photo-container-full{
     position: relative;
+}
+.photo-container-full {
+    width:60%;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.active .photo-container-full{
+    background-image: url("images/active-full.jpg");
+    
+}
+.find .photo-container-full{
+    width: 40%;
+    background-image: url("images/find-full.jpg");
+    
+}
+.work .photo-container-full{
+    background-image: url("images/work-full.jpg");
+    
+    
+}
+.photo-container-full img{
+    width:100%;
+    margin-bottom: -5px;
+}
+.points{
+    display: flex;
+    
+}
+.find{
+    flex-direction: row-reverse;
+}
+.find .points-photo-full{
+    left:0;    
 }
 
 .points-photo {
@@ -256,6 +446,12 @@ h3.growth:before {
     color: white;
     background-color: #5e42b0;
 }
+.points-photo-full{
+    position: absolute;
+    left:100%;
+    bottom:50%;
+    transform: translate(-50%)
+}
 
 .points-photo span {
     line-height: 70px;
@@ -263,7 +459,35 @@ h3.growth:before {
 }
 
 .points-text {
-    padding: 0 10px 50px 10px;
+    width:40%;
+    position: relative;
+    
+}
+.points-text-block{
+    position: absolute;
+    top:50%;
+    left:10%;
+    transform: translateY(-55px)
+    }
+.find .points-text{
+    width:60%;
+}
+.points-text h3{
+    color: #e7e7e7;
+    font: 700 6vh "Montserrat";
+    margin-top: 0;
+}
+.find h3{
+    text-align: right;
+}
+.find .points-text-block{
+    left:auto;
+    right:8%;
+}
+.points-text p{
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .footer {
@@ -311,7 +535,10 @@ h3.growth:before {
     top: 0;
     left: 147px;
 }
-
+.buttons-footer{
+    bottom:0;
+    margin-top: 5%;
+}
 .social {
     height: 50px;
     margin-top: 127px;
@@ -328,3 +555,7 @@ h3.growth:before {
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+
